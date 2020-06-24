@@ -4,7 +4,7 @@ const hash2 = ' #########';
 
 // to print ### challenge ###
 function hash(num){
-    console.log(hash1+ num +hash2)
+    console.log(hash1+ num +hash2);
 }
 
 
@@ -14,7 +14,7 @@ function hash(num){
 function one(n){
     let j = 1;
         while(j<=n){
-            console.log(j)
+            console.log(j);
             j++;
     }
 }
@@ -22,7 +22,7 @@ function one(n){
 //3. to print number from num1 to num2 inclusive.
 function three(num1, num2){
     while(num1<=num2){
-        console.log(num1)
+        console.log(num1);
         num1++;
     }
 }
@@ -103,6 +103,16 @@ function stringToCharacterOnEachLine(str){
         j++;
     }
 }
+//13. to print  whatever string given by user in each new line.
+function stringToCharacterOnEachLine1(str){
+    let i = 1;
+    let j = 2;
+    while (j <= str.length){
+        console.log(str.slice(i,j));
+        i+=2;
+        j+=2;
+    }
+}
 //14.  to print string backwards.
 function stringBackwards(str){
     console.log('print "' + str +'" backwards')
@@ -131,6 +141,8 @@ function fizzBuzz(num){
         }
     } else if (num1 % 5 === 0){
         console.log("Buzz")
+    } else {
+        console.log(num1);
     }
 }
 //16. headache --to print a fibonacci number till the user given number
@@ -194,10 +206,10 @@ hello1(6, 'Get out!');
 hash(12);
 stringToCharacterOnEachLine('think');
 hash(13);
-stringToCharacterOnEachLine('Nobody');
+stringToCharacterOnEachLine1('Nobody');
 hash(14);
 stringBackwards('back');
 hash(15);
-fizzBuzz(15);
+fizzBuzz(11);
 hash(16);
-Fibonacci(9);
+Fibonacci(22);
