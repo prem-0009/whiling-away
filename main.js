@@ -135,30 +135,34 @@ function fizzBuzz(num){
 }
 //16. headache --to print a fibonacci number till the user given number
 function Fibonacci(num){
-    //13
-    //the first two number x1 and x2 are 1 ..the first two fibonacci no's
-    let x1 = 1;
+    //the first two number x1 and x2 are 0 and1 ..the first two fibonacci no's
+    let x1 = 0;
     let x2 = 1;
-    //printing the first two fibonacci no's
-    console.log(x1);
-    console.log(x2);
-    //while loop to see if the result it <= or >= to user's no's
+    //run' while loop till our result match with user no
      while(x2 <= num || x1 <= num){
-         //the third no(or later 5.7.9 so on) being the sum of first and second no's
-        x1 = x1 + x2;
+        //print the x1
         console.log(x1)
-        //to see if the above calculated no is >= to user no..in that case break off the while loop.
-        //becoz' that is our goal.
-        if( x1 >= num){
+        //if our result(x1)===user num or if the next result(x2) is greater than user no ..then break
+        if( x1 === num || x2 > num){
             break;
         }
-        //the fourth no(or later 6.8.10 so on) being the sum of previous two no's
-        x2= x1 +x2;
+        //if our result(x1) !== user num..add the previous two no's 
+        x1 = x1 + x2;
+        
+        //print our next result x2
         console.log(x2)
-        //to break off while-loop if the sum from above matches with user no.
-        if( x2 >= num){
+        //if our result(x2) === user num..break off while loop
+        if( x2 === num){
             break;
         }
+        //if our result(x2) !== user num..add the previous two no's
+        x2= x1 +x2;
+    }
+    //if user num ===1..this will help print 0 1 1 ..instead of only 0 1
+    //if user num === 0..result will be 0
+    //it will print one more 1..
+    if (x2 === 1 && x1 === 1){
+        console.log(x2)
     }
 }
 
@@ -196,4 +200,4 @@ stringBackwards('back');
 hash(15);
 fizzBuzz(15);
 hash(16);
-Fibonacci(13);
+Fibonacci(9);
