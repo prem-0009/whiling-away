@@ -163,19 +163,10 @@ function Fibonacci(num){
         
         //print our next result x2
         console.log(x2)
-        //if our result(x2) === user num..break off while loop
-        if( x2 === num){
-            break;
-        }
-        //if our result(x2) !== user num..add the previous two no's
+
         x2= x1 +x2;
     }
-    //if user num ===1..this will help print 0 1 1 ..instead of only 0 1
-    //if user num === 0..result will be 0
-    //it will print one more 1..
-    if (x2 === 1 && x1 === 1){
-        console.log(x2)
-    }
+    
 }
 
 
@@ -212,4 +203,4 @@ stringBackwards('back');
 hash(15);
 fizzBuzz(11);
 hash(16);
-Fibonacci(22);
+Fibonacci(21);
